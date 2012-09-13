@@ -1,0 +1,1 @@
+This project generates or shows feeds from Twitter and Google News based on a search term obtained from the user. There a number of things I need to take care of such as the need to refresh the page every single time to search for a different word in Twitter, the look and feel of the page and so on.
