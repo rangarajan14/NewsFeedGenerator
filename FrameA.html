@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<form name="search" onSubmit="update(); return false;">
+  Search for: <input type="text" id="searchtag"/>
+</form>
+<button type="submit" onclick="update()">Search Tweets </button>
+
+
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+
+function update()
+{
+var x= document.getElementById("searchtag").value;
+
+  new TWTR.Widget(
+ {
+  version: 2,
+  type: 'search',
+  search: x,
+  interval: 3000,
+  title: '',
+  subject: '',
+  width: 400,
+  height: 500,
+  theme:
+  {
+    shell:
+    {
+      background: '#74a3d4',
+      color: '#000000'
+    },
+    tweets:
+    {
+      background: '#f0f0e4',
+      color: '#000000',
+      links: '#eb1a60'
+    }
+  },
+  features: 
+  {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    behavior: 'default'
+  }
+ }).render().start();
+}
+
+</script>
+
+</body>
+</html>

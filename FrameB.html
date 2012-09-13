@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://www.google.com/jsapi?key=ABQIAAAAFEyVt-pBJaTXzM__EKlCrBTsyyvZhuBjP1YLRoRPwle1bnzSQRQBJp693I-9cLRWqwHDWCO_xmGezQ" 
+   	    type="text/javascript">
+    </script>
+    
+    <script type="text/javascript">
+    
+	  google.load("search", "1", {"language" : "en"});
+          function initialize()
+     	  {
+    		var searchControl = new google.search.SearchControl();
+		var siteSearch = new google.search.WebSearch();
+		searchControl.addSearcher(new google.search.NewsSearch()); 			 //Google News search
+		var drawOptions = new google.search.DrawOptions();
+		drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+		searchControl.draw(document.getElementById("searchcontrol"), drawOptions);
+
+          }
+      google.setOnLoadCallback(initialize);
+    </script>
+	
+	<style type="text/css">
+		/* the width of the controls (keep same as gsc-results for flush look) */
+		#searchcontrol { width:600px; }
+		.gsc-control { width:600px; }
+		/* the width of the search results box; no height value = nice auto look  */
+		.gsc-results { width:900px; }
+		/* the width of the search input */
+		.gsc-input { width:20px; }
+		.gs-title a { color:orange; font-weight:bold; }
+		#searchcontrol a { color:orange; }
+	</style>
+
+	<title>Google Search</title>
+  </head>
+  <body>
+	<h3>In the news</h3>
+	<p>
+    <div id="searchcontrol">Search for:</div><p>
+  </body>
+</html>
+
