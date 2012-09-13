@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<form name="search" onSubmit="update(); return false;">
-  Search for: <input type="text" id="searchtag"/>
-</form>
-<button type="submit" onclick="update()">Search Tweets </button>
 
+<body>
+
+<form name="search" onSubmit="update(); return false;">
+  Search for: <input type="text" id="searchtag" title="search"/>
+</form>
+
+<button type="submit" onclick="update()" >Search Tweets</button>
 
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
@@ -20,10 +23,10 @@ var x= document.getElementById("searchtag").value;
   type: 'search',
   search: x,
   interval: 3000,
-  title: '',
-  subject: '',
-  width: 400,
-  height: 500,
+  title: "What's the word on",
+  subject: x,
+  width: 420,
+  height: 475,
   theme:
   {
     shell:
@@ -49,6 +52,11 @@ var x= document.getElementById("searchtag").value;
 }
 
 </script>
-
 </body>
 </html>
+
+
+<!--
+
+
+-->

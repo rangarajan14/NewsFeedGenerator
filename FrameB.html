@@ -11,9 +11,9 @@
      	  {
     		var searchControl = new google.search.SearchControl();
 		var siteSearch = new google.search.WebSearch();
-		searchControl.addSearcher(new google.search.NewsSearch()); 			 //Google News search
+		searchControl.addSearcher(new google.search.NewsSearch()); 			 
 		var drawOptions = new google.search.DrawOptions();
-		drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+		drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_LINEAR);
 		searchControl.draw(document.getElementById("searchcontrol"), drawOptions);
 
           }
@@ -27,8 +27,8 @@
 		/* the width of the search results box; no height value = nice auto look  */
 		.gsc-results { width:900px; }
 		/* the width of the search input */
-		.gsc-input { width:20px; }
-		.gs-title a { color:orange; font-weight:bold; }
+		.gsc-input { width:15px; }
+		.gs-title a { color:red; font-weight:bold; }
 		#searchcontrol a { color:orange; }
 	</style>
 
@@ -40,4 +40,11 @@
     <div id="searchcontrol">Search for:</div><p>
   </body>
 </html>
+
+
+
+
+<!--
+
+-->
 
